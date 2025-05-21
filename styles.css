@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+}
+
+h1 {
+    background-color: green;
+    color: white;
+    font-size: 36px;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+
+}
+main {
+    height: 90vh;
+}
+.game-container {
+    position: relative;
+    display: flex;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    background-color: white;
+    margin: 40px auto;
+    width: 90%;
+    height: 80%;
+}
+#startbttn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: blue;
+
+}
+footer {
+    background-color: green;
+    color: white;
+}
