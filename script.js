@@ -67,12 +67,22 @@ document.addEventListener('DOMContentLoaded', function () {
         let yAxis = `${randomNum(5, 95)}%`
         event.target.style.left = xAxis;
         event.target.style.top = yAxis;
-        document.getElementById('xAxis').textContent = `X-Axis ${xAxis}`;
-        document.getElementById('yAxis').textContent = `Y-Axis ${yAxis}`;
+        document.getElementById('xAxis').textContent = `X-Axis: ${xAxis}`;
+        document.getElementById('yAxis').textContent = `Y-Axis: ${yAxis}`;
+    }
+    function resize(event) {
+        let height = `${randomNum(35, 150)}px`
+        let width = `${randomNum(45, 150)}px`
+        event.target.style.height = height;
+        event.target.style.width = width;
+        document.getElementById('height').textContent = `Hegith: ${height}`;
+        document.getElementById('width').textContent = `Width: ${width}`;
     }
     
     bttn.addEventListener('click', colorChange);    
     bttn.addEventListener('click', relocate);
+    bttn.addEventListener('click', resize);
+
 
 });
 

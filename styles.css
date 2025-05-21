@@ -30,7 +30,13 @@ main {
     left: 50%;
     top: 50%;
     background-color: blue;
-
+    z-index: 2;
+    text-wrap:wrap;
+    min-width: 45px;
+    min-height: 35px;
+    color: white;
+    text-shadow: 1px 1px black
+    
 }
 footer {
     background-color: green;
