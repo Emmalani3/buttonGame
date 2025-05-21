@@ -12,19 +12,7 @@
 
 ]
 /*
-//standard random array function
-function randomNum(arr) {
-    if (arr.length === 0) {
-        return "null";
-    }
-    const num = Math.floor(Math.random() * arr.length);
-    return arr[num];
-}
 
-function randomNum(arr.rangeMin, arr.rangeMax) {
-    const num = Math.floor(Math.random() * (arr.rangeMax - arr.rangeMin) + arr.rangeMin)
-    return num;
-}
 
 // go through each attribute
 function bttnAttributes(arr) {
@@ -38,13 +26,6 @@ function bttnAttributes(arr) {
 // generate button location on page, height, width, rgb, corner, z-index
 // when new button clicked starts process again and deactivate button
 
-//ALTERNATE BUTTON RANDOMIZER
-function randomNum(min, max) {
-    const num = Math.floor(Math.random() * (max - min) + min)
-    return num;
-}
-let xAxis = randomNum(5, 95);
-let yAxis = randomNum(5, 95);
 
 */
 document.addEventListener('DOMContentLoaded', function () {
@@ -63,26 +44,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     //change location of button
     function relocate(event) {
-        let xAxis = `${randomNum(5, 95)}%`
-        let yAxis = `${randomNum(5, 95)}%`
+        let xAxis = `${randomNum(5, 95)}%`;
+        let yAxis = `${randomNum(5, 95)}%`;
         event.target.style.left = xAxis;
         event.target.style.top = yAxis;
         document.getElementById('xAxis').textContent = `X-Axis: ${xAxis}`;
         document.getElementById('yAxis').textContent = `Y-Axis: ${yAxis}`;
     }
     function resize(event) {
-        let height = `${randomNum(35, 150)}px`
-        let width = `${randomNum(45, 150)}px`
-        event.target.style.height = height;
-        event.target.style.width = width;
-        document.getElementById('height').textContent = `Hegith: ${height}`;
-        document.getElementById('width').textContent = `Width: ${width}`;
+        let height = randomNum(35, 150);
+        let width = randomNum(45, 150);
+        event.target.style.height = `${height}px`;
+        event.target.style.width = `${width}px`;
+        document.getElementById('height').textContent = `Hegith: ${height}px`;
+        document.getElementById('width').textContent = `Width: ${width}px`;
+        
+        let text = (height + width)/8;
+        event.target.style.fontSize = `${text}px`;
+        document.getElementById('fontSize').textContent = `Font-size: ${text}`;
     }
+    function cornerRound(event) {
+        let corner = `${randomNum(0, 50)}px`;
+        event.target.style.borderRadius = corner;
+        document.getElementById('cornerRound').textContent = `Corner Round: ${corner}`
+    }
+
     
     bttn.addEventListener('click', colorChange);    
     bttn.addEventListener('click', relocate);
     bttn.addEventListener('click', resize);
-
+    bttn.addEventListener('click', cornerRound);
 
 });
 

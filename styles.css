@@ -35,7 +35,8 @@ main {
     min-width: 45px;
     min-height: 35px;
     color: white;
-    text-shadow: 1px 1px black
+    text-shadow: 1px 1px black;
+    border-radius: 50px;
     
 }
 footer {
