@@ -52,16 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('yAxis').textContent = `Y-Axis: ${yAxis}`;
     }
     function resize(event) {
-        let height = randomNum(35, 150);
-        let width = randomNum(45, 150);
+        let text= randomNum(10, 30);
+        event.target.style.fontSize = `${text}px`;
+        document.getElementById('fontSize').textContent = `Font-size: ${text}`;
+
+        let height = randomNum((text*2.5), 150);
+        let width = randomNum((text*3), 150);
         event.target.style.height = `${height}px`;
         event.target.style.width = `${width}px`;
         document.getElementById('height').textContent = `Hegith: ${height}px`;
         document.getElementById('width').textContent = `Width: ${width}px`;
-
-        let text = (height + width)/8;
-        event.target.style.fontSize = `${text}px`;
-        document.getElementById('fontSize').textContent = `Font-size: ${text}`;
     }
     function cornerRound(event) {
         let corner = `${randomNum(0, 50)}px`;
