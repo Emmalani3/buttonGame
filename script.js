@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     //change location of button
     function relocate(event) {
-        let xAxis = `${randomNum(5, 95)}%`;
-        let yAxis = `${randomNum(5, 95)}%`;
+        let xAxis = `${randomNum(10, 90)}%`;
+        let yAxis = `${randomNum(10, 90)}%`;
         event.target.style.left = xAxis;
         event.target.style.top = yAxis;
         document.getElementById('xAxis').textContent = `X-Axis: ${xAxis}`;
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
         event.target.style.width = `${width}px`;
         document.getElementById('height').textContent = `Hegith: ${height}px`;
         document.getElementById('width').textContent = `Width: ${width}px`;
-        
+
         let text = (height + width)/8;
         event.target.style.fontSize = `${text}px`;
         document.getElementById('fontSize').textContent = `Font-size: ${text}`;
@@ -68,12 +68,20 @@ document.addEventListener('DOMContentLoaded', function () {
         event.target.style.borderRadius = corner;
         document.getElementById('cornerRound').textContent = `Corner Round: ${corner}`
     }
+    //counter
+    let count = 0; // define this outside the function so it persists
 
+    function counter() {
+        count++;
+        let counterDisplay = document.getElementById('counter');
+        counterDisplay.textContent = `Counter: ${count}`;
+    }
     
     bttn.addEventListener('click', colorChange);    
     bttn.addEventListener('click', relocate);
     bttn.addEventListener('click', resize);
     bttn.addEventListener('click', cornerRound);
+    bttn.addEventListener('click', counter);
 
 });
 
