@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Game</title>
+    <title>Spider Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
-        <h1>The Button Game</h1>
+        <h1>The Button Game: Spiders</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Button Game</a></li>
@@ -20,27 +20,27 @@
     </header>
     <main>
         <div id="gameCtrl">
-            <p id="counter">Counter: 0</p>
-            <button is="reset">Restart</button>
+            <p id="spiderCounter">Counter: 0</p>
+           <button is="spiderReset">Restart</button>
         </div>
+       
         <div class="game-container">
-            <div>
-                <button id="startbttn">Click Me!</button>
+            <div class="image-wrapper">
+                <img id="mainImage" alt="spider" src="spiders/spider.png">
+                <!--<button id="spiderbttn">Click Me!</button> -->
             </div>
             
             <div id="newBttn"></div>
         </div>
         <div>
-            <p id="colorInfo">color?</p>
             <p id="xAxis">X-Axis?</p>
             <p id="yAxis">Y-Axis?</p>
             <p id="height">Height?</p>
             <p id="width">Width?</p>
-            <p id="cornerRound">Corner Round?</p>
-            <p id="fontSize">Font-Size?</p>
+            <p id="rotate">Rotate?</p>
         </div>
     </main>
-    <script src="script.js"></script>
+    <script src="spider.js"></script>
 </body>
 <footer>
     Emma Lani Bufalini &#169 2025

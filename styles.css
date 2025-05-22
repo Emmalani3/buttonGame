@@ -32,6 +32,17 @@ main {
     width: 90%;
     height: 80%;
 }
+
+#mainImage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: auto;
+    z-index: 2;
+    transform: rotate(0deg);
+    
+}
 #startbttn {
     position: absolute;
     left: 50%;
@@ -46,6 +57,7 @@ main {
     border-radius: 50px;
     
 }
+
 footer {
     background-color: green;
     color: white;
