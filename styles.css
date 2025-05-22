@@ -23,8 +23,12 @@ li a {
     justify-content: center;
 
 }
+a {
+    color: white;
+}
 body {
     height:100%;
+    display: block;
 }
 main {
     height: 100vh;
@@ -76,5 +80,12 @@ main {
 footer {
     background-color: green;
     color: white;
-    position: relative;
+    position:relative;
+    margin-top: 20px;
+    padding: 20px;
+}
+#headShot {
+    height: auto;
+    width: 30px;
+    border-radius: 50%;
 }
