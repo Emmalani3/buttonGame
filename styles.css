@@ -31,7 +31,7 @@ body {
     display: block;
 }
 main {
-    height: 100vh;
+    height: 80vh;
 }
 #gameCtrl {
     text-align: center;
@@ -43,13 +43,13 @@ main {
 .game-container {
     position: relative;
     display: flex;
-    padding: 20px;
+  
     border: 2px solid #ccc;
     border-radius: 12px;
     background-color: white;
-    margin: 40px auto;
+    margin: 10px auto;
     width: 90%;
-    height: 80%;
+    height: 85%;
 }
 
 #mainImage {

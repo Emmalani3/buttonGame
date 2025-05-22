@@ -53,9 +53,10 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Wrecked mode logic
-    let wreckedTrigger = 3;
+    let wreckedTrigger = randomNum(5, 10);
     let wreckedMode = false;
     let wreckedTimeout;
+    let timer = randomNum(500, 2000);
 
     function checkWreckedTrigger() {
 
@@ -75,7 +76,8 @@ document.addEventListener('DOMContentLoaded', function () {
             bttn.textContent = "Click Me!";
             bttn.style.backgroundColor = 'blue';
             wreckedTrigger = randomNum(5, 15); // re-randomize trigger
-        }, 1500);
+            timer = randomNum(500, 2000); // re-randomize delay
+        }, timer);
     }
 
     function handleClick(event) {
@@ -99,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         wreckedMode = false;
         clearTimeout(wreckedTimeout);
         wreckedTrigger = randomNum(5, 15);
+        timer = randomNum(200, 2000);
         bttn.textContent = "Click Me!";
         bttn.style.backgroundColor = 'blue';
         bttn.style.left = '50%';
