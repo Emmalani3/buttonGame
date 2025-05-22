@@ -2,17 +2,32 @@
     margin: 0px;
 }
 
-h1 {
+header {
     background-color: green;
     color: white;
-    font-size: 36px;
     margin: 0px;
     padding: 20px;
     text-align: center;
+    justify-content: center;
+}
+h1 {
+    font-size: 36px;
+}
+nav ul,
+li a {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    color: white;
+    justify-content: center;
 
 }
+body {
+    height:100%;
+}
 main {
-    height: 90vh;
+    height: 100vh;
 }
 #gameCtrl {
     text-align: center;
@@ -61,4 +76,5 @@ main {
 footer {
     background-color: green;
     color: white;
+    position: relative;
 }
