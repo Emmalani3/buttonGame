@@ -50,5 +50,25 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 500);
         }
     });
+    const spiderReset = document.getElementById('spiderReset');
+
+    spiderReset.addEventListener('click', () => {
+        // Reset counter
+        count = 0;
+        spiderCounter.textContent = `Count: ${count}`;
+
+        // Reset image
+        mainImage.src = `spiders/${imageName}.png`;
+
+        // Reset position, size, and rotation to original state
+        mainImage.style.left = '50%';
+        mainImage.style.top = '50%';
+        mainImage.style.width = '100px';
+        mainImage.style.height = '100px';
+        mainImage.style.transform = 'rotate(0deg)';
+
+        // Clear squish state
+        isSquish = false;
+    });
 
 });

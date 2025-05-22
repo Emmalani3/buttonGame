@@ -46,6 +46,25 @@ document.addEventListener('DOMContentLoaded', function () {
         let counterDisplay = document.getElementById('counter');
         counterDisplay.textContent = `Counter: ${count}`;
     }
+    const restartBtn = document.getElementById('reset');
+    const counterDisplay = document.getElementById('counter');
+
+    restartBtn.addEventListener('click', () => {
+        // Reset counter
+        count = 0;
+        counterDisplay.textContent = `Counter: ${count}`;
+
+        // Reset button styles
+        bttn.style.backgroundColor = 'blue';
+        bttn.style.left = '50%';
+        bttn.style.top = '50%';
+        bttn.style.width = '100px';
+        bttn.style.height = '50px';
+        bttn.style.fontSize = '16px';
+        bttn.style.borderRadius = '12px';
+        bttn.style.transform = 'none'; // optional in case you're adding rotation later
+    });
+
     
     bttn.addEventListener('click', colorChange);    
     bttn.addEventListener('click', relocate);
